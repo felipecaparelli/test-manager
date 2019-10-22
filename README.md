@@ -17,6 +17,8 @@ Test Manager Module - Laboratory Information System (LIS)
 - Clinician / Doctor
 - TestType (enum): values = BIOCHEMISTRY, MICROBIOLOGY, HEMATOLOGY
 
+![UML Model Class Diagram](diagrams/model-class-diagram.gif)
+
 ## Business Case
 
 ### Description

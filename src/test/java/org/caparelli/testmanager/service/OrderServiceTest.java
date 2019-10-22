@@ -1,16 +1,12 @@
 package org.caparelli.testmanager.service;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.caparelli.testmanager.model.Order;
-import org.caparelli.testmanager.repository.OrderRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class OrderServiceTest {
