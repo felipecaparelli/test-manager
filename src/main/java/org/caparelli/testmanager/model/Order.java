@@ -1,11 +1,6 @@
 package org.caparelli.testmanager.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.Where;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -18,10 +13,15 @@ public class Order {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "ord_id")
-    private Integer id;
+    private Long orderId;
 
-    @Column(name = "name", length = 80, nullable = false)
-    private String name;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "ordered_by", nullable = false)
+    private Clinician orderedBy;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
 
     @OneToMany(fetch=FetchType.LAZY, mappedBy = "order")
     private Set<Test> tests;

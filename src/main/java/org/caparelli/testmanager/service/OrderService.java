@@ -1,8 +1,7 @@
 package org.caparelli.testmanager.service;
 
-
-import org.caparelli.testmanager.model.Order;
+import org.caparelli.testmanager.request.Order;
 
 public interface OrderService {
-    Order create(Order orderRequest);
+    org.caparelli.testmanager.model.Order create(Order orderRequest);
 }

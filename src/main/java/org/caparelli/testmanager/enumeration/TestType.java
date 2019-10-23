@@ -1,6 +1,9 @@
 package org.caparelli.testmanager.enumeration;
 
-import org.caparelli.testmanager.model.*;
+import org.caparelli.testmanager.model.BiochemistryTest;
+import org.caparelli.testmanager.model.HematologyTest;
+import org.caparelli.testmanager.model.MicrobiologyTest;
+import org.caparelli.testmanager.model.Test;
 
 public enum TestType {
 

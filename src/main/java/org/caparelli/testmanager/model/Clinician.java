@@ -1,10 +1,6 @@
 package org.caparelli.testmanager.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -16,9 +12,21 @@ public class Clinician {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "cli_id")
-    private Integer id;
+    private Long clinicianId;
 
-    @Column(name = "name", length = 80, nullable = false)
-    private String name;
+    @Column(name = "doc_number", length = 80, nullable = false)
+    private String documentNumber = null;
+
+    @Column(name = "first_name", length = 80, nullable = false)
+    private String firstName = null;
+
+    @Column(name = "last_name", length = 80, nullable = false)
+    private String lastName = null;
+
+    @Column(name = "email", length = 80, nullable = false)
+    private String email = null;
+
+    @Column(name = "phone", length = 80)
+    private String phone = null;
 
 }
