@@ -1,27 +1,31 @@
 package org.caparelli.testmanager.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.Collection;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "tb_patients")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Patient {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "pat_id")
-    private Integer id;
+    @Column(name = "patient_id")
+    private Long patientId;
 
-    @Column(name = "name", length = 80, nullable = false)
-    private String name;
+    @Column(name = "doc_number", length = 80, nullable = false)
+    private String documentNumber = null;
 
-    private Collection<Order> orders;
+    @Column(name = "first_name", length = 80, nullable = false)
+    private String firstName = null;
+
+    @Column(name = "last_name", length = 80, nullable = false)
+    private String lastName = null;
+
+    @Column(name = "email", length = 80, nullable = false)
+    private String email = null;
+
+    @Column(name = "phone", length = 80)
+    private String phone = null;
 }
